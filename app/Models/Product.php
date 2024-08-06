@@ -15,6 +15,7 @@ class Product extends Model
         "info",
         "describer",
         "image",
+        "price",
         "featured",
         "state",
         "categories_id",

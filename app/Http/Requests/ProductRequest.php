@@ -26,7 +26,7 @@ class ProductRequest extends FormRequest
         return [
             "code"=>"required|unique:products",
             "name"=>"required",
-            "price"=>"required",
+            "price"=>"required|numeric",
             "info"=>"required",
             "describer"=>"required",
         ];

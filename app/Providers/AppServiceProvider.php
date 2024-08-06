@@ -21,6 +21,16 @@ class AppServiceProvider extends ServiceProvider
                 $app->make(\App\Repositories\Repository\UserRepository::class)
             );
         });
+        $this->app->bind(\App\Services\Admin\ProductAdminService::class, function ($app) {
+            return new \App\Services\Admin\ProductAdminService(
+                $app->make(\App\Repositories\Repository\ProductRepository::class)
+            );
+        });
+        $this->app->bind(\App\Services\Admin\CategoryAdminService::class, function ($app) {
+            return new \App\Services\Admin\CategoryAdminService(
+                $app->make(\App\Repositories\Repository\CategoryRepository::class)
+            );
+        });
     }
 
     /**
